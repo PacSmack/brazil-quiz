@@ -21,6 +21,9 @@ THEN I can save my initials and score
 Have a better understanding of JavaScript and DOM elements
 
 
-[image](https://user-images.githubusercontent.com/79550591/129243913-a6c3b71f-c6c7-4373-89fa-0dc1ed35a5a3.png)
+![image](https://user-images.githubusercontent.com/79550591/129244167-969bed90-89ef-4667-9659-749b9c5874b1.png)
+
+
+![image](https://user-images.githubusercontent.com/79550591/129243913-a6c3b71f-c6c7-4373-89fa-0dc1ed35a5a3.png)
 
 
