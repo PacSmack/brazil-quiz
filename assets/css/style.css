@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Arimo&family=Montserrat&family=Open+Sans&family=Roboto&display=swap');
-
-*{
+* {
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);        
+}
+
+body {   
+    background-color: rgb(255, 255, 255);
 }
 
 header {
@@ -17,14 +19,40 @@ header {
 }
 
 .container {
-    position: absolute;
-    top: 50%;
+    margin-top: 70px;
     border-radius: 15px;
     -ms-transform: translateY(-50%);
     background-color: rgb(56, 56, 56);
     color: white;
     padding: 40px 0 40px 0;
     text-align: center;
+}
+
+#buttonlist {
+    background-color: rgb(56, 56, 56);
+    text-align: -webkit-center;
+}
+
+.answerBtn {
+    display: block;
+    transition-duration: 0.4s;
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;    
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.answerBtn:hover {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
 }
 
 .page-wrap {
@@ -36,6 +64,16 @@ header {
     justify-content: center;
 }
 
+.title {
+    color: green;
+    text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+}
+
+span {
+    color: rgb(255, 255, 0);
+    text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+}
+
 .container {
     width: 100%;
 }
@@ -43,18 +81,21 @@ header {
 .container p {
     background-color: rgb(56, 56, 56);
     padding: 0 50px;
-    
 }
 
 .btn {
     text-align: center;
     align-items: center;
     display: block;
-    
+}
+
+#highscoresTitle {
+    font-weight: bold;
+    color: green;
+    font-size: large;
 }
 
 .container .start-btn {
     display: inline;
     border-radius: 10px;
-    
 }

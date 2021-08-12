@@ -11,20 +11,26 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body>
+<body onload="generateHs()">
     <header>
-    <h1 class="title">JavaScript QUIZ</h1>
-    <h1 class="title">TIME LEFT:</h1>
+        <h1 class="title">Brazilian<span class="quiz">QUIZ</span> </h1>
+        <h1 class="title">TIME LEFT: <span id="timer"></span></h1>
     </header>
     <div class="page-wrap">
-        <div class="container" id="#quizBox">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore debitis minus quae beatae rem culpa
-                eaque
-                dolores temporibus iusto sed rerum, unde, dignissimos quidem in laboriosam ducimus dolorum numquam!
-                Voluptas!</p>
+        <div class="container" id="quizBox">
+            <p>Do you think that you know everything about Brazil?!</p>
             <div class="btn">
                 <button class="start-btn" id="start-btn">Start Quiz</button>
             </div>
+            <div id="questionsArea">
+
+            </div>
+
+            <div id="highscoresList">
+                <h1 id="highscoresTitle">HIGHSCORES!</h1>
+
+            </div>
+
         </div>
     </div>
 

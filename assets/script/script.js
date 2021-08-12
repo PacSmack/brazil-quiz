@@ -1,69 +1,56 @@
-var score = 0
-
-var startBtnEl = document.querySelector("#start-btn");
-var quizEl = document.querySelector("#quizBox");
+var quizArea = document.querySelector("#questionsArea")
+var quizStart = document.querySelector("#start-btn")
 
 
-var questions = [
+var quizQuestion = [
     {
-        question: "Who invented JavaScript?",
+        question: "Q1: Who discovered Brazil?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "Christopher Columbus",
+            b: "Vasco da Gama",
+            c: "Pedro Alvares Cabral",
+            d: "Bill Clinton"
         },
         correctAnswer: "c"
     },
     {
-        question: "",
+        question: "Q2: Which month does the Carnaval takes place?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
-        },    
-        correctAnswer: "c"
-    },
-    {
-        question: "",
-        answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
-        },    
+            a: "January",
+            b: "December",
+            c: "July",
+            d: "February"
+        },
         correctAnswer: "d"
     },
     {
-        question: "",
+        question: "Q3: Who is the current president of Brazil?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
-        },    
+            a: "Lula",
+            b: "Bolsonaro",
+            c: "Dilma",
+            d: "Ciro Gomes"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "Which language is spoken in Brazil?",
+        answers: {
+            a: "Portuguese",
+            b: "Brazilian",
+            c: "Spanish",
+            d: "Arabic"
+        },
         correctAnswer: "a"
     },
     {
-        question: "",
+        question: "How many world cups does Brazil has?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
-        },    
+            a: "6",
+            b: "5",
+            c: "3",
+            d: "7"
+        },
         correctAnswer: "b"
     }
 ];
-
-
-
-
-startBtnEl.addEventListener("click", function(){
-    for (let i = 0; i < questions.length; i++) {
-        var questionEl = questions[i]
-        var answersEl = answers[i]        
-    }
-
-}, false)
