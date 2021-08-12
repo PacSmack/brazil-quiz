@@ -196,3 +196,47 @@ function rightAnswer() {
         promptQuestions();
     }
 }
+
+function promptQuestions() {
+    quizStart.remove();
+    if (timerLength === 55) {
+        timer();
+    }
+
+    questionEl.textContent = quizQuestion[currentQuestion].question;
+    answer1.textContent = quizQuestion[currentQuestion].answers.a;
+    answer2.textContent = quizQuestion[currentQuestion].answers.b;
+    answer3.textContent = quizQuestion[currentQuestion].answers.c;
+    answer4.textContent = quizQuestion[currentQuestion].answers.d;
+
+    quizArea.appendChild(questionContainer);
+
+    document.querySelectorAll(".answerBtn").forEach((Element) => {
+        Element.addEventListener("click", rightAnswer);
+    });
+}
+
+var scoreList = document.getElementById("highscoresList");
+
+function generateHs() {
+    var checkList = localStorage.getItem("highscoresList");
+    if (checkList === null) {
+        console.log("empty");
+    } else {
+        var highScores = JSON.parse(checkList);
+
+
+        for (i = 0; i < highScores.length; i++) {
+            var savedHighScores = highScores[i].score;
+            var username = highScores[i].name;
+
+            var scoreListItem = document.createElement("p");
+            scoreListItem.textContent = username + ": " + savedHighScores;
+
+            scoreList.appendChild(scoreListItem);
+        }
+    }
+}
+
+
+quizStart.addEventListener("click", promptQuestions);
