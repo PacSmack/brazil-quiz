@@ -109,3 +109,43 @@ function timer() {
         }
     }, 1000);
 }
+
+
+function endGame() {
+    questionContainer.remove();
+    clearInterval(timer);
+
+    if (timerLength < 0) {
+        timerLength = 0;
+    };
+
+    // generating elements 
+    var scoreContainer = document.createElement("div");
+    scoreContainer.setAttribute("id", "savescoreBox");
+    var scoreTitle = document.createElement("h2");
+    scoreTitle.textContent = "Your score is ";
+    scoreTitle.setAttribute("id", "scoreTitle")
+    var score = document.createElement("span");
+    score.textContent = timerLength;
+    var scoreForm = document.createElement("form");
+    var userLabel = document.createElement("label");
+    userLabel.textContent = "Your name:  ";
+    userLabel.setAttribute("id", "userLabel");
+    var userName = document.createElement("input");
+    userName.setAttribute("type", "text");
+    userName.setAttribute("id", "userName")
+    var saveButton = document.createElement("input");
+    saveButton.setAttribute("type", "submit")
+    saveButton.setAttribute("id", "savescoreBtn")
+    // generate div
+    scoreForm.appendChild(userLabel);
+    scoreForm.appendChild(userName);
+    scoreForm.appendChild(saveButton);
+    scoreTitle.appendChild(score);
+    scoreContainer.appendChild(scoreTitle);
+    scoreContainer.appendChild(scoreForm);
+    // show div
+    quizArea.appendChild(scoreContainer);
+
+    scoreForm.addEventListener("submit", saveScores);
+}
