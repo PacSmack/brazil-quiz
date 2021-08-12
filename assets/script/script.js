@@ -90,3 +90,22 @@ answerList.appendChild(answer3);
 answerList.appendChild(answer4);
 questionContainer.appendChild(questionEl);
 questionContainer.appendChild(answerList);
+
+var timer;
+function timer() {
+    timer = setInterval(function () {
+        if (!gameOver) {
+            timerLength--;
+            document.querySelector("#timer").textContent = timerLength;
+
+            if (timerLength < 30) {
+                document.getElementById("timer").style.color = "red";
+            }
+
+            if (timerLength <= 0) {
+                gameOver = true;
+                endGame();
+            }
+        }
+    }, 1000);
+}
