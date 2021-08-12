@@ -54,3 +54,39 @@ var quizQuestion = [
         correctAnswer: "b"
     }
 ];
+
+
+
+var currentQuestion = 0;
+var timerLength = 55;
+var highScores = [];
+var gameOver = false;
+
+// Create elements and give classes 
+var questionContainer = document.createElement("div");
+questionContainer.className = "questionBox";
+var questionEl = document.createElement("h2");
+var answerList = document.createElement("div");
+answerList.setAttribute("id", "buttonlist");
+
+// answers
+var answer1 = document.createElement("button");
+answer1.className = "answerBtn";
+answer1.setAttribute("answerData", "a");
+var answer2 = document.createElement("button");
+answer2.className = "answerBtn";
+answer2.setAttribute("answerData", "b");
+var answer3 = document.createElement("button");
+answer3.className = "answerBtn";
+answer3.setAttribute("answerData", "c");
+var answer4 = document.createElement("button");
+answer4.className = "answerBtn";
+answer4.setAttribute("answerData", "d");
+
+
+answerList.appendChild(answer1);
+answerList.appendChild(answer2);
+answerList.appendChild(answer3);
+answerList.appendChild(answer4);
+questionContainer.appendChild(questionEl);
+questionContainer.appendChild(answerList);
