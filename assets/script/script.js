@@ -149,3 +149,50 @@ function endGame() {
 
     scoreForm.addEventListener("submit", saveScores);
 }
+
+
+// saving to localstorage
+function saveScores(event) {
+    event.preventDefault();
+
+    var checkList = localStorage.getItem("highScores");
+    var savedScores = timerLength;
+    var savedNames = document.getElementById("userName").value;
+
+    if (checkList === null) {
+
+        var scoreObj = JSON.stringify([{ name: savedNames, score: savedScores }]);
+        var highScores = localStorage.setItem("highScores", scoreObj);
+
+    } else {
+
+        checkList = JSON.parse(checkList);
+        console.log(checkList)
+        checkList.push({ name: savedNames, score: savedScores });
+        localStorage.setItem("highScores", JSON.stringify(checkList));
+
+    }
+
+    document.getElementById("userName").value = "";
+    document.location.href = "./index.html"
+}
+
+
+function rightAnswer() {
+
+    var userAnswer = this.getAttribute("answerData")
+
+    if (userAnswer === quizQuestion[currentQuestion].correctAnswer) {
+    }
+    else {
+        timerLength = timerLength - 10;
+    }
+    if (currentQuestion === quizQuestion.length - 1) {
+        gameOver = true;
+        endGame();
+    }
+    else {
+        currentQuestion++;
+        promptQuestions();
+    }
+}
